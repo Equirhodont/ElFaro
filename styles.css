@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura de la pantalla */
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    background: #007acc;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    flex: 1; /* Permite que el contenido principal crezca y empuje el footer hacia abajo */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+video, audio {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #003366;
+    color: white;
+    position: relative; /* Asegura que el footer se mantenga debajo del contenido */
+    width: 100%;
+}
