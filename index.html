@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro - Noticias</title>
+    
+    <!-- Fuente desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Encabezado con Logo y Título -->
     <header>
         <h1>El Faro</h1>
-        <img src="assets/logo.png" alt="Logotipo de El Faro">
+        <img src="assets/logo.png" alt="Logo de El Faro">
     </header>
 
+    <!-- Menú de Navegación -->
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -20,56 +28,53 @@
         </ul>
     </nav>
 
-    <main>
-        <h2>Últimas Noticias</h2>
-        <table>
-            <tr>
-                <th>Título</th>
-                <th>Categoría</th>
-                <th>Resumen</th>
-            </tr>
-            <tr>
-                <td>DARK ANGEL anuncia "Extinction Level Event", primer disco de la banda de Thrash Metal en 34 años</td>
-                <td>General</td>
-                <td>La banda estadounidense de Thrash Metal DARK ANGEL ha revelado la portada de su nuevo disco, cuyo título será "Extinction Level Event". 
-                    Este lanzamiento será su primer álbum de estudio en 34 años y verá la luz en 2025 a través de Reversed Records.
-                    Primer adelanto de "Extinction Level Event", disponible el 11 de abril
-Como anticip        o de este esperado álbum, DARK ANGEL publicará el tema homónimo "Extinction Level Event" el viernes 11 de abril.</td>
-            </tr>
-            <tr>
-                <td>Nintendo confirma la duración del Direct enfocado en Switch 2: el evento se encargará de hablar sobre el hardware y sus juegos de lanzamiento</td>
-                <td>General</td>
-                <td>Faltan un par de horas para que la industria reciba un nuevo Nintendo Direct, el cual será el más importante en los últimos años al hablar de Switch 2 y todo lo que ofrecerá. 
-                    Debido a esto, los responsables del evento hicieron un recordatorio para que todos los interesados estén pendientes de la presentación y confirmaron su duración.
+    <!-- Contenedor de artículos en formato de grilla -->
+    <section class="articles-container">
+        <article>
+            <h2>DARK ANGEL anuncia "Extinction Level Event", primer disco de la banda de Thrash Metal en 34 años</h2>
+            <p><strong>Categoría:</strong> General</p>
+            <p>La banda estadounidense de Thrash Metal DARK ANGEL ha revelado la portada de su nuevo disco, cuyo título será "Extinction Level Event". 
+                Este lanzamiento será su primer álbum de estudio en 34 años y verá la luz en 2025 a través de Reversed Records.
+                Primer adelanto de "Extinction Level Event", disponible el 11 de abril
+                Como anticipo de este esperado álbum, DARK ANGEL publicará el tema homónimo "Extinction Level Event" el viernes 11 de abril.</p>
+        </article>
 
-                    Como seguramente sabes, la presentación completa de Nintendo Switch se llevará a cabo este miércoles 2 de abril y las apuestas están puestas sobre la mesa para conocer qué es lo que los de Kioto mostrarán a todo el mundo.
+        <article>
+            <h2>Nintendo confirma la duración del Direct enfocado en Switch 2: el evento se encargará de hablar sobre el hardware y sus juegos de lanzamiento.</h2>
+            <p><strong>Categoría:</strong> General</p>
+            <p>Faltan un par de horas para que la industria reciba un nuevo Nintendo Direct, el cual será el más importante en los últimos años al hablar de Switch 2 y todo lo que ofrecerá. 
+                Debido a esto, los responsables del evento hicieron un recordatorio para que todos los interesados estén pendientes de la presentación y confirmaron su duración.
+                Como seguramente sabes, la presentación completa de Nintendo Switch se llevará a cabo este miércoles 2 de abril y las apuestas están puestas sobre la mesa para conocer qué es lo que los de Kioto mostrarán a todo el mundo.
+                Ahora, y a escaso tiempo de que inicie el Direct, se acaba de conocer que tendrá una duración aproximada de 60 minutos. Gracias a esto, se espera que el tiempo sea suficiente para dejar claro todo lo que el hardware podrá hacer y también para conocer varios títulos que seguramente estarán desde el lanzamiento.</p>
+        </article>
 
-                    Ahora, y a escaso tiempo de que inicie el Direct, se acaba de conocer que tendrá una duración aproximada de 60 minutos. Gracias a esto, se espera que el tiempo sea suficiente para dejar claro todo lo que el hardware podrá hacer y también para conocer varios títulos que seguramente estarán desde el lanzamiento.</td>
-            </tr>
-            <tr>
-                <td>El Gobierno reabrirá 99 quirófanos cerrados por falta de personal o fallos en las instalaciones.</td>
-                <td>General</td>
-                <td>La misma imagen se repite cada semana en algún lugar del país: decenas de personas agolpadas en las entradas de un hospital o filas interminables de pacientes en el interior esperando para ser atendidos. México tiene un problema de salud y una de sus ramas tiene su origen en los centros médicos. 
-                    El Gobierno se ha propuesto reforzar la red pública hospitalaria en todo el territorio y ha anunciado este martes la rehabilitación de numerosos espacios que se encontraban cerrados o resultaban insuficientes o defectuosos. Una parte importante se localiza en el IMSS Bienestar, donde se prevé reabrir este año 99 quirófanos que permanecían cerrados por ausencia de personal quirúrgico, falta de equipamiento o problemas de infraestructura. 
-                    Casi siete de cada diez quirófanos que reabrirán, el 67%, se encuentran en áreas de difícil cobertura médica y población vulnerable.</td>
-            </tr>
-        </table>
+        <article>
+            <h2>El Gobierno reabrirá 99 quirófanos cerrados por falta de personal o fallos en las instalaciones.</h2>
+            <p><strong>Categoría:</strong> General</p>
+            <p>La misma imagen se repite cada semana en algún lugar del país: decenas de personas agolpadas en las entradas de un hospital o filas interminables de pacientes en el interior esperando para ser atendidos. México tiene un problema de salud y una de sus ramas tiene su origen en los centros médicos. 
+                El Gobierno se ha propuesto reforzar la red pública hospitalaria en todo el territorio y ha anunciado este martes la rehabilitación de numerosos espacios que se encontraban cerrados o resultaban insuficientes o defectuosos. Una parte importante se localiza en el IMSS Bienestar, donde se prevé reabrir este año 99 quirófanos que permanecían cerrados por ausencia de personal quirúrgico, falta de equipamiento o problemas de infraestructura. 
+                Casi siete de cada diez quirófanos que reabrirán, el 67%, se encuentran en áreas de difícil cobertura médica y población vulnerable.</p>
+        </article>
+    </section>
 
-        <h3>Video de la Semana</h3>
-        <video controls>
+    <!-- Video y Audio -->
+    <section class="multimedia">
+        <h2 class="multimedia-title">Video de la Semana</h2>
+        <video controls width="400">
             <source src="assets/video.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
+            Tu navegador no soporta el video.
         </video>
 
-        <h3>Podcast</h3>
+        <h2 class="multimedia-title">Podcast</h2>
         <audio controls>
             <source src="assets/audio.mp3" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
+            Tu navegador no soporta el audio.
         </audio>
-    </main>
+    </section>
 
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2025 El Faro. Todos los derechos reservados.</p>
+        <p>© 2024 El Faro - Todos los derechos reservados</p>
     </footer>
     <script src="script.js"></script>
 </body>
