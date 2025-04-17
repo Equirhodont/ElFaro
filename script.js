@@ -1,35 +1,50 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleccionamos todos los artículos
-    let articles = document.querySelectorAll(".articles-container article");
-
-    // Evento para cambiar el fondo del artículo al pasar el mouse
-    articles.forEach(article => {
-        article.addEventListener("mouseenter", function() {
-            this.style.backgroundColor = "#000";
-            this.style.color = "#fff";
-        });
-
-        article.addEventListener("mouseleave", function() {
-            this.style.backgroundColor = "#fff";
-            this.style.color = "#000";
-        });
-
-        // Al hacer clic en un artículo, muestra un mensaje
-        article.addEventListener("click", function() {
-            alert("Has seleccionado: " + this.querySelector("h2").innerText);
-        });
+// Reloj en tiempo real
+function updateClock() {
+    const now = new Date();
+    const formatted = now.toLocaleString('es-CL', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
     });
-
-    // Agregar animación al video cuando se reproduce
-    let video = document.querySelector("video");
-    if (video) {
-        video.addEventListener("play", function() {
-            this.style.border = "5px solid #c9d2d0";
-            this.style.transition = "border 0.5s ease-in-out";
-        });
-
-        video.addEventListener("pause", function() {
-            this.style.border = "none";
-        });
+    document.getElementById('clock').textContent = formatted;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+  
+  // Manejo de artículos dinámicos y contador
+  function initArticleForm() {
+    const form = document.getElementById('article-form');
+    const list = document.getElementById('article-list');
+    const counter = document.getElementById('article-counter');
+  
+    function updateCounter() {
+      const count = list.querySelectorAll('article').length;
+      counter.textContent = `Total de artículos: ${count}`;
     }
-});
+  
+    updateCounter();
+  
+    form?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const title = document.getElementById('article-title').value;
+      const content = document.getElementById('article-content').value;
+  
+      if (title.trim() && content.trim()) {
+        const article = document.createElement('article');
+        const h3 = document.createElement('h3');
+        const p = document.createElement('p');
+  
+        h3.textContent = title;
+        p.textContent = content;
+  
+        article.appendChild(h3);
+        article.appendChild(p);
+  
+        list.appendChild(article);
+        form.reset();
+        updateCounter();
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', initArticleForm);
+  
