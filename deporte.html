@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Faro - Deportes</title>
-    
-    <!-- Fuente desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Archivo CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deportes - El Faro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>El Faro</h1>
+    <img src="assets/logo.png" alt="Logo El Faro" />
+    <div class="clock" id="clock"></div>
+  </header>
 
-    <!-- Encabezado con Logo y Título -->
-    <header>
-        <h1>El Faro - Deportes</h1>
-        <img src="assets/logo.png" alt="Logo de El Faro">
-    </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="deporte.html">Deportes</a></li>
+      <li><a href="negocios.html">Negocios</a></li>
+    </ul>
+  </nav>
 
-    <!-- Menú de Navegación -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="deporte.html">Deporte</a></li>
-            <li><a href="negocios.html">Negocios</a></li>
-        </ul>
-    </nav>
+  <main>
+    <h2 class="section-title">Noticias de Deportes</h2>
+    <p>Total de artículos: <span id="article-count-deportes">3</span></p>
 
-    <!-- Contenedor de artículos en formato de grilla -->
-    <section class="articles-container">
-        <article>
-            <h2>Así va la tabla de la Primera B: Fecha 5. Hay emoción en el ascenso.</h2>
+    <section class="article-grid" id="deportes-articles">
+      <article>
+        <h2>Así va la tabla de la Primera B: Fecha 5. Hay emoción en el ascenso.</h2>
             <p><strong>Categoría:</strong> Fútbol</p>
             <p>Se cerró la quinta fecha de la Primera B. Y el ascenso del fútbol chileno tiene nuevo líder. 
                 Copiapó goleó a Wanderers y le arrebató la cima. El "León de Atacama" ahora manda con 11 puntos.
                 Los caturros se quedaron con 10 unidades y son sublíderes junto a Universidad de Concepción y Recoleta. 
                 El colista sigue siendo Santiago Morning. Este lunes perdió 1-0 ante Rangers y se mantuvo en el fondo con -4 puntos. 
                 Los talquinos subieron al 5° lugar con 8.</p>
-        </article>
-
-        <article>
-            <h2>Tabilo va contra un tenista con una llamativa historia y Garin ante el 13 de mundo: 
-                Cómo sigue el ATP de Houston para los chilenos y cuándo jugarían para los octavos de final.</h2>
-            <p><strong>Categoría:</strong> Tenis</p>
-            <p>Los octavos de final del ATP 250 de Houston tienen a dos chilenos en competencia. 
-                Cristian Garin (133°), quien juega el torneo gracias a un wild card, sorteó sin problemas la primera ronda y venció al suizo Alexander Ritschard (125°) por 6-3 y 6-4.</p>
-        </article>
-
-        <article>
-            <h2>La “Mentalidad Mamba”: El legado de Kobe Bryant dentro y fuera del tabloncillo.</h2>
+      </article>
+      <article>
+        <h2>Tabilo va contra un tenista con una llamativa historia y Garin ante el 13 de mundo: 
+            Cómo sigue el ATP de Houston para los chilenos y cuándo jugarían para los octavos de final.</h2>
+        <p><strong>Categoría:</strong> Tenis</p>
+        <p>Los octavos de final del ATP 250 de Houston tienen a dos chilenos en competencia. 
+            Cristian Garin (133°), quien juega el torneo gracias a un wild card, sorteó sin problemas la primera ronda y venció al suizo Alexander Ritschard (125°) por 6-3 y 6-4.</p>
+      </article>
+      <article>
+        <h2>La “Mentalidad Mamba”: El legado de Kobe Bryant dentro y fuera del tabloncillo.</h2>
             <p><strong>Categoría:</strong> Baloncesto</p>
             <p>Cuando se sostiene la conversación sobre el mejor jugador de todos los tiempos, las estadísticas, la influencia y los títulos remiten siempre la disputa a Michael Jordan, Lebron James y Kobe Bryant. 
                 Pero la herencia que dejó Bryant sobrepasa las canchas de baloncesto, con su forma de pensar, su resiliencia y su ética de trabajo.</p>
-        </article>
+      </article>
     </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>© 2024 El Faro - Todos los derechos reservados</p>
-    </footer>
-    <script src="script.js"></script>
+    <section>
+      <h3>Agregar nuevo artículo</h3>
+      <form id="add-deportes-form">
+        <input type="text" id="deportes-title" placeholder="Título del artículo" required />
+        <textarea id="deportes-description" placeholder="Descripción del artículo" required></textarea>
+        <button type="submit">Agregar artículo</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 El Faro - Deportes</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
