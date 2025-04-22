@@ -1,151 +1,56 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  header {
-    text-align: center;
-    background-color: #c9d2d0;
-    padding: 20px;
-    color: #31231e;
+  h1, h5 {
+    font-weight: 600;
   }
   
-  header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+  footer h5 {
+    margin-bottom: 1rem;
   }
   
-  header img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .clock {
-    font-size: 1.2em;
-    color: #31231e;
-  }
-  
-  nav {
-    background-color: #31231e;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    text-decoration: underline;
-    font-weight: normal;
-    color: #ffffff;
-    transition: color 0.3s, font-weight 0.3s, text-decoration 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #c9d2d0;
-    font-weight: bold;
+  footer ul li a {
     text-decoration: none;
   }
   
-  main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+  footer ul li a:hover {
+    text-decoration: underline;
   }
   
-  .section-title {
-    font-size: 1.8em;
-    margin-top: 30px;
-    color: #31231e;
+  .card-title {
+    color: #212529;
   }
   
-  .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+  .btn-outline-light:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
   }
   
-  .article-grid article {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
+  .alert {
+    font-weight: bold;
   }
   
-  .article-grid article:hover {
-    background-color: #000000;
-    color: #ffffff;
+  /* Responsivo para artículos secundarios */
+  @media (max-width: 768px) {
+    .card-text {
+      font-size: 0.9rem;
+    }
   }
   
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  
-  form input,
-  form textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form button {
-    padding: 10px;
-    font-size: 1em;
-    background-color: #31231e;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #555;
-  }
-  
-  .media {
-    margin-top: 15px;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Ajustes generales */
+  .form-floating label {
+    color: #6c757d;
   }
   
   footer {
-    background-color: #c9d2d0;
-    text-align: center;
-    padding: 20px;
-    color: #31231e;
-    margin-top: 30px;
+    border-top: 4px solid #198754;
   }
   
-  @media (max-width: 600px) {
-    nav ul li {
-      margin: 10px 5px;
-    }
-  
-    header h1 {
-      font-size: 2em;
-    }
+  main {
+    min-height: 60vh;
+  }
   
     .section-title {
       font-size: 1.5em;
