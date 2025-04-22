@@ -1,50 +1,55 @@
-// Reloj en tiempo real
-function updateClock() {
-    const now = new Date();
-    const formatted = now.toLocaleString('es-CL', {
-      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-      hour: '2-digit', minute: '2-digit', second: '2-digit'
-    });
-    document.getElementById('clock').textContent = formatted;
+// script.js - El Faro
+
+// Contador de artículos
+let contador = 3;
+
+// Función para mostrar reloj y fecha en vivo con formato completo
+function iniciarReloj() {
+  const reloj = document.getElementById('reloj');
+  if (reloj) {
+    setInterval(() => {
+      const ahora = new Date();
+      const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-CL', opcionesFecha);
+      const hora = ahora.toLocaleTimeString('es-CL');
+      reloj.textContent = `${fecha} - ${hora}`;
+    }, 1000);
   }
-  setInterval(updateClock, 1000);
-  updateClock();
-  
-  // Manejo de artículos dinámicos y contador
-  function initArticleForm() {
-    const form = document.getElementById('article-form');
-    const list = document.getElementById('article-list');
-    const counter = document.getElementById('article-counter');
-  
-    function updateCounter() {
-      const count = list.querySelectorAll('article').length;
-      counter.textContent = `Total de artículos: ${count}`;
-    }
-  
-    updateCounter();
-  
-    form?.addEventListener('submit', function(e) {
+}
+
+// Esperar a que el DOM cargue
+window.addEventListener('DOMContentLoaded', () => {
+  iniciarReloj();
+
+  // Manejo del formulario de carga dinámica
+  const form = document.getElementById('formulario');
+  if (form) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      const title = document.getElementById('article-title').value;
-      const content = document.getElementById('article-content').value;
-  
-      if (title.trim() && content.trim()) {
-        const article = document.createElement('article');
-        const h3 = document.createElement('h3');
-        const p = document.createElement('p');
-  
-        h3.textContent = title;
-        p.textContent = content;
-  
-        article.appendChild(h3);
-        article.appendChild(p);
-  
-        list.appendChild(article);
+      const titulo = document.getElementById('titulo').value;
+      const contenido = document.getElementById('contenido').value;
+
+      if (titulo && contenido) {
+        const nuevaColumna = document.createElement('div');
+        nuevaColumna.className = 'col';
+        nuevaColumna.innerHTML = `
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">${titulo}</h5>
+              <p class="card-text">${contenido}</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">Leer</a>
+            </div>
+          </div>
+        `;
+        document.querySelector('.row.row-cols-1.row-cols-md-3')?.appendChild(nuevaColumna);
+
+        contador++;
+        alert(`Artículo agregado exitosamente. Total: ${contador}`);
+
         form.reset();
-        updateCounter();
+      } else {
+        alert('Por favor completa todos los campos.');
       }
     });
   }
-  
-  document.addEventListener('DOMContentLoaded', initArticleForm);
-  
+});
