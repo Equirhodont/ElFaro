@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deportes - El Faro</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Faro - Deportes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>El Faro</h1>
-    <img src="assets/logo.png" alt="Logo El Faro" />
-    <div class="clock" id="clock"></div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="deporte.html">Deportes</a></li>
-      <li><a href="negocios.html">Negocios</a></li>
-    </ul>
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        El Faro
+      </a>
+      <div class="d-flex">
+        <a href="index.html" class="btn btn-outline-light btn-sm me-2">Inicio</a>
+        <a href="negocios.html" class="btn btn-outline-light btn-sm">Negocios</a>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <h2 class="section-title">Noticias de Deportes</h2>
-    <p>Total de artículos: <span id="article-count-deportes">3</span></p>
+  <!-- Reloj en vivo -->
+  <div class="bg-secondary text-white text-center py-2">
+    <strong>Hora actual:</strong> <span id="reloj">--:--:--</span>
+  </div>
 
-    <section class="article-grid" id="deportes-articles">
-      <article>
-        <h2>Así va la tabla de la Primera B: Fecha 5. Hay emoción en el ascenso.</h2>
-            <p><strong>Categoría:</strong> Fútbol</p>
-            <p>Se cerró la quinta fecha de la Primera B. Y el ascenso del fútbol chileno tiene nuevo líder. 
-                Copiapó goleó a Wanderers y le arrebató la cima. El "León de Atacama" ahora manda con 11 puntos.
-                Los caturros se quedaron con 10 unidades y son sublíderes junto a Universidad de Concepción y Recoleta. 
-                El colista sigue siendo Santiago Morning. Este lunes perdió 1-0 ante Rangers y se mantuvo en el fondo con -4 puntos. 
-                Los talquinos subieron al 5° lugar con 8.</p>
-      </article>
-      <article>
-        <h2>Tabilo va contra un tenista con una llamativa historia y Garin ante el 13 de mundo: 
-            Cómo sigue el ATP de Houston para los chilenos y cuándo jugarían para los octavos de final.</h2>
-        <p><strong>Categoría:</strong> Tenis</p>
-        <p>Los octavos de final del ATP 250 de Houston tienen a dos chilenos en competencia. 
-            Cristian Garin (133°), quien juega el torneo gracias a un wild card, sorteó sin problemas la primera ronda y venció al suizo Alexander Ritschard (125°) por 6-3 y 6-4.</p>
-      </article>
-      <article>
-        <h2>La “Mentalidad Mamba”: El legado de Kobe Bryant dentro y fuera del tabloncillo.</h2>
-            <p><strong>Categoría:</strong> Baloncesto</p>
-            <p>Cuando se sostiene la conversación sobre el mejor jugador de todos los tiempos, las estadísticas, la influencia y los títulos remiten siempre la disputa a Michael Jordan, Lebron James y Kobe Bryant. 
-                Pero la herencia que dejó Bryant sobrepasa las canchas de baloncesto, con su forma de pensar, su resiliencia y su ética de trabajo.</p>
-      </article>
-    </section>
+  <!-- Encabezado -->
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Sección de Deportes</h1>
+    <p>Las últimas noticias del mundo deportivo</p>
+  </header>
 
-    <section>
-      <h3>Agregar nuevo artículo</h3>
-      <form id="add-deportes-form">
-        <input type="text" id="deportes-title" placeholder="Título del artículo" required />
-        <textarea id="deportes-description" placeholder="Descripción del artículo" required></textarea>
-        <button type="submit">Agregar artículo</button>
-      </form>
-    </section>
+  <!-- Artículos de deportes -->
+  <main class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Así va la tabla de la Primera B: Fecha 5. Hay emoción en el ascenso.</h5>
+            <p class="card-text">Se cerró la quinta fecha de la Primera B. Y el ascenso del fútbol chileno tiene nuevo líder. 
+              Copiapó goleó a Wanderers y le arrebató la cima. El "León de Atacama" ahora manda con 11 puntos.
+              Los caturros se quedaron con 10 unidades y son sublíderes junto a Universidad de Concepción y Recoleta. 
+              El colista sigue siendo Santiago Morning. Este lunes perdió 1-0 ante Rangers y se mantuvo en el fondo con -4 puntos. 
+              Los talquinos subieron al 5° lugar con 8.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Tabilo va contra un tenista con una llamativa historia y Garin ante el 13 de mundo: 
+              Cómo sigue el ATP de Houston para los chilenos y cuándo jugarían para los octavos de final.</h5>
+            <p class="card-text">Los octavos de final del ATP 250 de Houston tienen a dos chilenos en competencia. 
+              Cristian Garin (133°), quien juega el torneo gracias a un wild card, sorteó sin problemas la primera ronda y venció al suizo Alexander Ritschard (125°) por 6-3 y 6-4.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 El Faro - Deportes</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-light mt-5 pt-4 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Email: contacto@elfaro.cl</p>
+          <p>Tel: +56 9 1234 5678</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">Facebook</a></li>
+            <li><a href="#" class="text-light">Twitter</a></li>
+            <li><a href="#" class="text-light">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Secciones</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-light">Inicio</a></li>
+            <li><a href="negocios.html" class="text-light">Negocios</a></li>
+            <li><a href="#" class="text-light">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="bg-secondary">
+      <p class="text-center mb-0">&copy; 2025 El Faro. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
